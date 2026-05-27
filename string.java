@@ -22,7 +22,7 @@ public class string {
         // System.out.println("Compare equal for string 2 to string 3: " + string2.equalsIgnoreCase(string3));
         // String w = "I am a strong man";
         // String newW = w.replace("o","a");
-        // String word1 = w.substring (0, 11);
+        // String word1 = w.substring  (0, 11);
         // System.out.println(word1);
         // System.out.println(newW);
         // String name = "Alice";
@@ -36,7 +36,7 @@ public class string {
         // String formattedPrice = String.format("The price is $%.2f", price);
         // System.out.print(formattedPrice);
 
-
+        
         
 
 
