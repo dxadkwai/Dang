@@ -1,7 +1,9 @@
 package main;
 import javax.swing.*;
 
+// Entry point of the 2D Adventure game application
 public class Main{
+    // Main entry point: Create game window and start the game
     public static void main(String[] args) {
         JFrame window = new JFrame() ;
         GamePanel gamePanel = new GamePanel();
@@ -17,7 +19,7 @@ public class Main{
         
         
         
-
+        gamePanel.setupGame();
         gamePanel.startGameThread();
         
 

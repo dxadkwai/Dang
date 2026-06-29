@@ -2,15 +2,18 @@ package main;
 
 import entity.Entity;
 
+// Handles collision detection between entities and game world tiles
 public class CollisionChecker {
     
     GamePanel gp;
 
+    // Constructor: Initialize collision checker with game panel reference
     public CollisionChecker(GamePanel gp) {
         this.gp = gp;
 
     }
 
+    // Check if entity collides with tiles based on movement direction
     public void checkTile(Entity entity) {
 
         int entityLeftWorldX = entity.worldX + entity.solidArea.x;

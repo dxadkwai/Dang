@@ -3,7 +3,10 @@ package entity;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+// Base class for all game entities. Contains shared properties like position, speed, direction, and sprite animation
 public class Entity {
+
+    
     public int worldX , worldY;
     public int speed;
 

@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import main.KeyHandler;
 
-
+// Player character class. Handles player movement, animation, collision detection, and rendering
 public class Player extends Entity {
     GamePanel gp;
     KeyHandler keyH;
@@ -17,6 +17,7 @@ public class Player extends Entity {
     public final int screenX;
     public final int screenY;
 
+    // Constructor: Initialize player with game panel and key handler, set default values and load sprites
     public Player(GamePanel gp, main.KeyHandler keyH) {
         this.gp = gp;
         this.keyH = keyH;
@@ -32,6 +33,8 @@ public class Player extends Entity {
         
 
     }
+    
+    // Set player's starting position, speed, and direction
     public void setDefaultValues() {
 
         worldX = gp.tileSize*23;
@@ -40,6 +43,7 @@ public class Player extends Entity {
         direction = "down"; 
     }
 
+    // Load all player sprite images from resource files
     public void getPlayerImage() {
         try {
             up1=ImageIO.read(getClass().getResourceAsStream("/res/player/boy_up_1.png"));
@@ -59,6 +63,7 @@ public class Player extends Entity {
         }
     }
 
+    // Update player state based on keyboard input, collision detection, and sprite animation
     public void update() {
 
         if (keyH.upPressed==true||keyH.downPressed==true||keyH.leftPressed==true||keyH.rightPressed==true){  
@@ -118,6 +123,7 @@ public class Player extends Entity {
 
     }
 
+    // Draw player sprite on screen based on current direction and animation frame
     public void draw(Graphics2D g2) {
 
         // g2.setColor(Color.WHITE);

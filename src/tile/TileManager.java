@@ -9,6 +9,7 @@ import javax.imageio.ImageIO;
 
 import main.GamePanel;
 
+// Manages all tiles in the game world: loads tile images, map data, and renders tiles with camera culling
 public class TileManager {
     
     GamePanel gp;
@@ -16,6 +17,7 @@ public class TileManager {
     public int mapTileNum[] [];
 
 
+    // Constructor: Initialize tiles and load map from file
     public TileManager(GamePanel gp) {
         this.gp = gp;
 
@@ -26,7 +28,7 @@ public class TileManager {
         loadMap("/res/maps/world01.txt");
     }
 
-
+    // Load all tile images from resources and set collision properties
     public void getTileImage() {
         try {
             tile[0] =new Tile();
@@ -55,6 +57,7 @@ public class TileManager {
         }
     }
 
+    // Load map tile data from text file
     public void loadMap(String filePath) {  
         try {
             InputStream is = getClass().getResourceAsStream(filePath);
@@ -89,6 +92,8 @@ public class TileManager {
             
         }
     }
+    
+    // Draw visible tiles on screen with camera culling optimization
     public void draw(Graphics2D g2) {
         
         int worldCol =0;
