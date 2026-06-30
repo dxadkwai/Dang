@@ -67,7 +67,7 @@ public class LinkedList {
     }
 
 
-    // add one item to your linked list
+    // add one item to the start of your linked list
     public void prepend(int value) {
         Node newNode =new Node(value);
         if (length == 0) {
@@ -116,7 +116,7 @@ public class LinkedList {
 
         Node pre = head;
         head = pre.next;
-        pre.next = head;
+        pre.next = null;
         length--;
 
         
@@ -134,7 +134,7 @@ public class LinkedList {
 
         Node temp = head;
 
-        for (int i = 0; i<length; i++) {
+        for (int i = 0; i<index; i++) {
             temp = temp.next;
         }
         return temp;
@@ -200,7 +200,7 @@ public class LinkedList {
             temp.next = before;
             before = temp;
             temp=after;
-            
+
         }
 
 
