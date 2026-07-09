@@ -23,5 +23,8 @@ public class Main {
         linkedList.printList();
         System.out.println(linkedList.get(5).value);
 
+
+
+        DoublyLinkedList myDLL = new DoublyLinkedList(7);
     }
 }

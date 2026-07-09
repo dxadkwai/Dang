@@ -10,7 +10,7 @@ public class LinkedList {
 
 
     // an internal class inside LinkedList that will always be creates with each method
-    class Node{
+    public static class Node{
 
         int value;
         Node next;
